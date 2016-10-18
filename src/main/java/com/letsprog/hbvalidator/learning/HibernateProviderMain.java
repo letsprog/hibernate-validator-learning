@@ -1,5 +1,8 @@
 package com.letsprog.hbvalidator.learning;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 
 import javax.validation.ConstraintViolation;
@@ -19,12 +22,16 @@ public class HibernateProviderMain {
 		validPerson.setName("Farah");
 		validPerson.setAge("26");
 		validPerson.setEmailAddress("farah.fertassi.dev@gmail.com");
+		validPerson.setLuckyNumbers(Arrays.asList("0","2"));
+		validPerson.setCar(new Car("BMW"));
 
 		Person inValidPerson = new Person();
 
 		inValidPerson.setName("Koko");
 		inValidPerson.setAge("-18");
 		inValidPerson.setEmailAddress("farah.fertassi.dev");
+		inValidPerson.setLuckyNumbers(Arrays.asList("3","-4","45"));
+		inValidPerson.setCar(new Car(""));
 
 		// If multiple Validation Providers exist, specify the one to use
 		HibernateValidatorConfiguration validatorConfiguration = Validation.byProvider(HibernateValidator.class).configure();
