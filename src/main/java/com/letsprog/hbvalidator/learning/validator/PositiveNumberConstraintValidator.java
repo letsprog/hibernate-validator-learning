@@ -14,10 +14,8 @@ public class PositiveNumberConstraintValidator implements ConstraintValidator<Po
 		
 		boolean isPostive = false;
 		
-		if(Integer.parseInt(value)>=0){
+		if(Integer.parseInt(value) >= 0){
 			isPostive = true;
-		} else {
-//			context.disableDefaultConstraintViolation();
 		}
 		
 		return isPostive;
