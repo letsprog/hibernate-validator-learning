@@ -24,9 +24,8 @@ public class Person {
 	@PositiveNumberConstraint(payload=Severity.Error.class) // Customized Constraint Annotation
 	private String age;
 	
-//	@Valid
-//	private List<@PositiveNumberConstraint String> luckyNumbers;
-	private List<String> luckyNumbers;
+	@Valid
+	private List<@PositiveNumberConstraint String> luckyNumbers;
 	
 	@NotNull
 	@Valid Car car;
