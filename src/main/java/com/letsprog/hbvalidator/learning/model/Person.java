@@ -1,13 +1,15 @@
-package com.letsprog.hbvalidator.learning;
+package com.letsprog.hbvalidator.learning.model;
 
 import java.util.List;
-import java.util.Set;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.NotBlank;
+
+import com.letsprog.hbvalidator.learning.validator.PositiveNumberConstraint;
+import com.letsprog.hbvalidator.learning.validator.Severity;
 
 public class Person {
 	
@@ -19,13 +21,12 @@ public class Person {
 	private String emailAddress;
 	
 	@NotNull
-	@PositiveNumberConstraint
+	@PositiveNumberConstraint(payload=Severity.Error.class) // Customized Constraint Annotation
 	private String age;
 	
-	@Valid
-	private List<@PositiveNumberConstraint String> luckyNumbers; 
-	// The annotation @PositiveNumberConstraint is disallowed for this location
-	// => 
+//	@Valid
+//	private List<@PositiveNumberConstraint String> luckyNumbers;
+	private List<String> luckyNumbers;
 	
 	@NotNull
 	@Valid Car car;

@@ -1,4 +1,4 @@
-package com.letsprog.hbvalidator.learning;
+package com.letsprog.hbvalidator.learning.model;
 
 import org.hibernate.validator.constraints.NotEmpty;
 

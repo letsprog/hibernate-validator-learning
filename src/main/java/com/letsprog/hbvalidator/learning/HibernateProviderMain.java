@@ -13,6 +13,9 @@ import javax.validation.ValidatorFactory;
 import org.hibernate.validator.HibernateValidator;
 import org.hibernate.validator.HibernateValidatorConfiguration;
 
+import com.letsprog.hbvalidator.learning.model.Car;
+import com.letsprog.hbvalidator.learning.model.Person;
+
 public class HibernateProviderMain {
 
 	public static void main(String[] args) {
@@ -21,7 +24,7 @@ public class HibernateProviderMain {
 
 		validPerson.setName("Farah");
 		validPerson.setAge("26");
-		validPerson.setEmailAddress("farah.fertassi.dev@gmail.com");
+		validPerson.setEmailAddress("farah.fertassi@letsprog.com");
 		validPerson.setLuckyNumbers(Arrays.asList("0","2"));
 		validPerson.setCar(new Car("BMW"));
 

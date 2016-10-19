@@ -1,4 +1,4 @@
-package com.letsprog.hbvalidator.learning;
+package com.letsprog.hbvalidator.learning.validator;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
@@ -7,7 +7,6 @@ public class PositiveNumberConstraintValidator implements ConstraintValidator<Po
 
 	@Override
 	public void initialize(PositiveNumberConstraint constraintAnnotation) {
-		
 	}
 
 	@Override
@@ -17,6 +16,8 @@ public class PositiveNumberConstraintValidator implements ConstraintValidator<Po
 		
 		if(Integer.parseInt(value)>=0){
 			isPostive = true;
+		} else {
+//			context.disableDefaultConstraintViolation();
 		}
 		
 		return isPostive;

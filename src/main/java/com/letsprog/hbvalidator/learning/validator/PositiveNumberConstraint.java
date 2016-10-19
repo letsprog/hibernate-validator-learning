@@ -1,4 +1,4 @@
-package com.letsprog.hbvalidator.learning;
+package com.letsprog.hbvalidator.learning.validator;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
-@Target({ ElementType.FIELD, ElementType.TYPE_USE })
+@Target({ ElementType.FIELD, ElementType.TYPE_USE, ElementType.ANNOTATION_TYPE })
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = PositiveNumberConstraintValidator.class)
 @Documented
@@ -19,6 +19,6 @@ public @interface PositiveNumberConstraint {
 	
 	Class<?>[] groups() default {};
 	
-	Class<? extends Payload>[] payload() default {}; // TODO FFE Check what this is for.
+	Class<? extends Payload>[] payload() default {};
 
 }
