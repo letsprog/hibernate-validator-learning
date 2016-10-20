@@ -28,7 +28,8 @@ public class Person {
 	private List<@PositiveNumberConstraint String> luckyNumbers;
 	
 	@NotNull
-	@Valid Car car;
+	@Valid 
+	private Car car;
 
 	public String getName() {
 		return name;
