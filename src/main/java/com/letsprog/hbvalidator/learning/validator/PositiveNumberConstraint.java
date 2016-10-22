@@ -9,8 +9,8 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
-@Target({ ElementType.FIELD, ElementType.TYPE_USE, ElementType.ANNOTATION_TYPE })
-@Retention(RetentionPolicy.RUNTIME)
+@Target({ ElementType.FIELD, ElementType.TYPE_USE })
+@Retention(RetentionPolicy.SOURCE)
 @Constraint(validatedBy = PositiveNumberConstraintValidator.class)
 @Documented
 public @interface PositiveNumberConstraint {
